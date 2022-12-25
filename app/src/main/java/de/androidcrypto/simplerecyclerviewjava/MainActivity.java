@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     List<EntryModel> entryList;
     RecyclerView recyclerView;
-    RecyclerViewAdapter recyclerViewAdapter;
+    EntryRecyclerViewAdapter recyclerViewAdapter;
     LinearLayoutManager linearLayoutManager;
 
     @Override
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
 
         // adding our array list to our recycler view adapter class.
-        recyclerViewAdapter = new RecyclerViewAdapter(entryList, this);
+        recyclerViewAdapter = new EntryRecyclerViewAdapter(entryList, this);
 
         // setting adapter to our recycler view.
         recyclerView.setAdapter(recyclerViewAdapter);
